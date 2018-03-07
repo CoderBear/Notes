@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         HashSet<String> set = (HashSet<String>) sharedPreferences.getStringSet("notes", null);
 
-        if(set == null) {
+        if(set == null || set.isEmpty()) {
             notes.add("Example Note");
         } else {
             notes = new ArrayList<>(set);
